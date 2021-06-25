@@ -34,17 +34,20 @@ namespace pong
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Nueva-BoldExtended", 10F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(213, 220);
+            this.button1.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
+            this.button1.Location = new System.Drawing.Point(192, 213);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 34);
+            this.button1.Size = new System.Drawing.Size(145, 43);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Đăng kí";
+            this.button1.Text = "Change";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -59,12 +62,12 @@ namespace pong
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Nueva-BoldExtended", 14F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(110, 151);
+            this.textBox1.Font = new System.Drawing.Font("Cooper BlkIt BT", 20F);
+            this.textBox1.Location = new System.Drawing.Point(89, 140);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 54);
+            this.textBox1.Size = new System.Drawing.Size(358, 62);
             this.textBox1.TabIndex = 3;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -73,15 +76,26 @@ namespace pong
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Nueva-BoldExtended", 15F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(149, 123);
+            this.label1.Location = new System.Drawing.Point(159, 106);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 26);
+            this.label1.Size = new System.Drawing.Size(214, 23);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Nhập tên của bạn";
+            this.label1.Text = "ENTER YOUR NAME";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(124, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(292, 56);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // NhapTen
             // 
@@ -89,7 +103,8 @@ namespace pong
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(526, 265);
+            this.ClientSize = new System.Drawing.Size(536, 277);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -99,6 +114,7 @@ namespace pong
             this.Name = "NhapTen";
             this.Text = "NhapTen";
             this.Load += new System.EventHandler(this.NhapTen_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,5 +126,6 @@ namespace pong
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

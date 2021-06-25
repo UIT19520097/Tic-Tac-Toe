@@ -8,7 +8,7 @@ namespace pong
 {
     public class DatabaseControler
     {
-        private static string datasource = "Server=LEVINNT;Database=PingPong(userpass);Trusted_Connection=True;";
+        private static string datasource = "Server=PC-PC;Database=PingPong(userpass);Trusted_Connection=True;";
         private static SqlConnection connection;
         private static SqlCommand cmd;
         private DatabaseControler ()

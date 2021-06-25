@@ -15,7 +15,6 @@ namespace pong
         public DangNhap()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -36,25 +35,7 @@ namespace pong
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if(DatabaseControler.Instance.checktaikhoan(textBox1.Text)==false)
-            {
-                MessageBox.Show("Tài khoản chưa tồn tại");
-            }
-            else
-            {
-                if(DatabaseControler.Instance.checkpass(textBox2.Text)==false)
-                {
-                    MessageBox.Show("Sai mật khẩu");
-                }
-                else
-                {
-                    MessageBox.Show("Đăng nhập thành công");
-                    user = textBox1.Text;
-                    GiaoDienDaDangKi f = new GiaoDienDaDangKi();
-                    f.Show();
-                    this.Close();
-                }
-            }
+            
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -77,6 +58,29 @@ namespace pong
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (DatabaseControler.Instance.checktaikhoan(textBox1.Text) == false)
+            {
+                MessageBox.Show("Tài khoản chưa tồn tại");
+            }
+            else
+            {
+                if (DatabaseControler.Instance.checkpass(textBox2.Text) == false)
+                {
+                    MessageBox.Show("Sai mật khẩu");
+                }
+                else
+                {
+                    MessageBox.Show("Đăng nhập thành công");
+                    user = textBox1.Text;
+                    GiaoDienDaDangKi f = new GiaoDienDaDangKi();
+                    f.Show();
+                    this.Close();
+                }
+            }
         }
     }
 }

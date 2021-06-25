@@ -41,33 +41,30 @@ namespace pong
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("UVN Saigon", 30F, System.Drawing.FontStyle.Bold);
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Cooper BlkIt BT", 30F);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(283, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(227, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 72);
+            this.label1.Size = new System.Drawing.Size(222, 51);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Lịch sử";
+            this.label1.Text = "HISTORY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // quaylai
             // 
             this.quaylai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.quaylai.BackColor = System.Drawing.Color.Teal;
+            this.quaylai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
             this.quaylai.FlatAppearance.BorderColor = System.Drawing.Color.Honeydew;
             this.quaylai.FlatAppearance.BorderSize = 0;
-            this.quaylai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.quaylai.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.quaylai.Font = new System.Drawing.Font("Cooper BlkIt BT", 15F);
             this.quaylai.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.quaylai.Image = global::pong.Properties.Resources.arrow_96_32;
-            this.quaylai.Location = new System.Drawing.Point(615, 61);
-            this.quaylai.Margin = new System.Windows.Forms.Padding(4);
+            this.quaylai.Location = new System.Drawing.Point(546, 12);
             this.quaylai.Name = "quaylai";
-            this.quaylai.Size = new System.Drawing.Size(143, 35);
+            this.quaylai.Size = new System.Drawing.Size(124, 42);
             this.quaylai.TabIndex = 1;
-            this.quaylai.Text = "Quay Lại";
+            this.quaylai.Text = "Back";
             this.quaylai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.quaylai.UseVisualStyleBackColor = false;
             this.quaylai.Click += new System.EventHandler(this.button1_Click);
@@ -75,14 +72,15 @@ namespace pong
             // xoalichsu
             // 
             this.xoalichsu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.xoalichsu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.xoalichsu.Location = new System.Drawing.Point(615, 13);
-            this.xoalichsu.Margin = new System.Windows.Forms.Padding(4);
+            this.xoalichsu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
+            this.xoalichsu.Font = new System.Drawing.Font("Cooper BlkIt BT", 15F);
+            this.xoalichsu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.xoalichsu.Location = new System.Drawing.Point(546, 361);
             this.xoalichsu.Name = "xoalichsu";
-            this.xoalichsu.Size = new System.Drawing.Size(143, 40);
+            this.xoalichsu.Size = new System.Drawing.Size(124, 42);
             this.xoalichsu.TabIndex = 3;
-            this.xoalichsu.Text = "Xóa lịch sử";
-            this.xoalichsu.UseVisualStyleBackColor = true;
+            this.xoalichsu.Text = "Delete";
+            this.xoalichsu.UseVisualStyleBackColor = false;
             this.xoalichsu.Click += new System.EventHandler(this.xoalichsu_Click);
             // 
             // lichsu
@@ -91,12 +89,11 @@ namespace pong
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lichsu.BackColor = System.Drawing.Color.Transparent;
-            this.lichsu.Font = new System.Drawing.Font("UVN Gio May", 13F, System.Drawing.FontStyle.Bold);
+            this.lichsu.Font = new System.Drawing.Font("Cooper BlkIt BT", 20F);
             this.lichsu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lichsu.Location = new System.Drawing.Point(80, 100);
-            this.lichsu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lichsu.Location = new System.Drawing.Point(59, 101);
             this.lichsu.Name = "lichsu";
-            this.lichsu.Size = new System.Drawing.Size(629, 260);
+            this.lichsu.Size = new System.Drawing.Size(553, 277);
             this.lichsu.TabIndex = 4;
             this.lichsu.Text = "Time Point";
             this.lichsu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -104,17 +101,16 @@ namespace pong
             // 
             // LichSuNguoiChoi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(796, 430);
-            this.Controls.Add(this.lichsu);
+            this.ClientSize = new System.Drawing.Size(678, 415);
             this.Controls.Add(this.xoalichsu);
+            this.Controls.Add(this.lichsu);
             this.Controls.Add(this.quaylai);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LichSuNguoiChoi";
             this.Text = "LichSuNguoiChoi";
             this.ResumeLayout(false);

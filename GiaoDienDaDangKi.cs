@@ -25,8 +25,9 @@ namespace pong
         private void button1_Click(object sender, EventArgs e)
         {
             Console.Beep();
-            TypeGame f = new TypeGame();
+            MakeRoom f = new MakeRoom();
             f.Show();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -125,6 +126,11 @@ namespace pong
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
         }

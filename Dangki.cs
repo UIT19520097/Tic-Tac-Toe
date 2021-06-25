@@ -14,7 +14,6 @@ namespace pong
         public Dangki()
         {
             InitializeComponent();
-            //this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -36,23 +35,7 @@ namespace pong
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if(DatabaseControler.Instance.checktaikhoan(textBox1.Text))
-            {
-                MessageBox.Show("Tài khoản đã tồn tại");
-            }
-            else
-            {
-                if(checkpass()==false)
-                    MessageBox.Show("Nhập lại mật khẩu đi con di lon");
-                else
-                {
-                    DatabaseControler.Instance.insertuser(textBox1.Text, textBox3.Text, textBox2.Text,(AppControler.LayThoiGian()).ToString());
-                    MessageBox.Show("Tạo tài khoản thành công");
-                    DangNhap f = new DangNhap();
-                    f.Show();
-                    this.Close();
-                }
-            }
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -77,6 +60,32 @@ namespace pong
             DangNhap f = new DangNhap();
             f.Show();
             this.Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (DatabaseControler.Instance.checktaikhoan(textBox1.Text))
+            {
+                MessageBox.Show("Tài khoản đã tồn tại");
+            }
+            else
+            {
+                if (checkpass() == false)
+                    MessageBox.Show("Hai mật khẩu không trùng khớp");
+                else
+                {
+                    DatabaseControler.Instance.insertuser(textBox1.Text, textBox3.Text, textBox2.Text, (AppControler.LayThoiGian()).ToString());
+                    MessageBox.Show("Tạo tài khoản thành công");
+                    DangNhap f = new DangNhap();
+                    f.Show();
+                    this.Close();
+                }
+            }
         }
     }
 }
