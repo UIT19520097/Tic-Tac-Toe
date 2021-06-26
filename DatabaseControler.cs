@@ -8,7 +8,7 @@ namespace pong
 {
     public class DatabaseControler
     {
-        private static string datasource = "Server=PC-PC;Database=PingPong(userpass);Trusted_Connection=True;";
+        private static string datasource = "Server=PC-PC;Database=TicTacToe;Trusted_Connection=True;";
         private static SqlConnection connection;
         private static SqlCommand cmd;
         private DatabaseControler ()
@@ -47,13 +47,13 @@ namespace pong
             }
             connection.Close();
         }
-        public void insertpoint (int point,string time, string taikhoan)//thêm điểm của người chơi với máy
+        public void insertlichsu (string taikhoan,string doithu,string thoigian, string result,int score)//thêm lịch sử
         {
             connection.Open();
             try
             {
 
-                string query = "insert into choivoimay values('"+taikhoan+ "','" + time +"',"+point+")";
+                string query = "insert into lichsu values('"+taikhoan+ "','"+doithu+"','" + thoigian +"','"+result+"',"+score+")";
                 cmd.CommandText = query;
                 cmd.ExecuteNonQuery();
             }
@@ -79,13 +79,13 @@ namespace pong
             }
             connection.Close();
         }
-        public void updateHighscore(string value, string taikhoan)//update diem so cao nhat
+        public void updatebxh(string value,int data, string taikhoan)//cập nhật bảng xếp hạng
         {
             connection.Open();
             try
             {
 
-                string query = "update userpass set highscore=" + value + " where taikhoan='" + taikhoan + "'";
+                string query = "update bangxephang set "+value+"=" + data + " where taikhoan = '" + taikhoan + "'";
                 cmd.CommandText = query;
                 cmd.ExecuteNonQuery();
             }
@@ -114,21 +114,63 @@ namespace pong
             connection.Close();
             return res;
         }
+        public int getdatabxh(string value, string taikhoan) // lấy dữ liệu từ bảng xếp hạng
+        {
+            int res = 0;
+            connection.Open();
+            try
+            {
+                string query = "select " + value + " from bangxephang where taikhoan='" + taikhoan + "'";
+                cmd.CommandText = query;
+                SqlDataReader dataReader = cmd.ExecuteReader();//ExecuteReader dùng khi cần lấy giá trị trả về
+                dataReader.Read();
+                res = Int32.Parse(dataReader[value].ToString());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            connection.Close();
+            return res;
+        }
         public string showlichsu(string taikhoan)//hiển thị lịch sử của người chơi
         {
             string res = "";
             connection.Open();
             try
             {
-                string query = "select thoigian,point from choivoimay where taikhoan='" + taikhoan + "'";
+                string query = "select doithu,result,thoigian,score from lichsu where taikhoan='" + taikhoan + "'order by score DESC";
                 cmd.CommandText = query;
                 SqlDataReader dataReader = cmd.ExecuteReader();
                 while(dataReader.Read())
                 {
-                    res=res+dataReader[0].ToString() +"         "+ dataReader[1].ToString()+"\n";
+                    res=res+dataReader[0].ToString() +"             "+ dataReader[1].ToString()+"     "+dataReader[2].ToString()+"     "+dataReader[3].ToString()+"\n";
                 }
             }
             catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            connection.Close();
+            return res;
+        }
+        public string showbxh()//hiển thị lịch sử của người chơi
+        {
+            string res = "";
+            connection.Open();
+            try
+            {
+                string query = "select * from bangxephang order by score DESC";
+                cmd.CommandText = query;
+                int dem = 1;
+                SqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    res = res +"    "+ dem.ToString() +"          "+dataReader[0].ToString() +"            " + dataReader[1].ToString() + "          " + dataReader[2].ToString() + "         " + dataReader[3].ToString() + "           " +dataReader[4].ToString()+"\n";
+                    dem = dem + 1;
+                }
+            }
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
@@ -140,7 +182,7 @@ namespace pong
             connection.Open();
             try
             {
-                string query = "delete  from choivoimay where taikhoan='" + taikhoan + "'";
+                string query = "delete  from lichsu where taikhoan='" + taikhoan + "'";
                 cmd.CommandText = query;
                 cmd.ExecuteNonQuery();
             }
@@ -180,7 +222,23 @@ namespace pong
             try
             {
 
-                string query = "insert into userpass values('" + user + "','" + pass + "','" + time +"','"+name+"',0" +")";
+                string query = "insert into userpass values('" + user + "','" + pass + "','" + time +"','"+name+"')";
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            connection.Close();
+        }
+        public void insertbxh(string user)//thêm thông tin tài khoản
+        {
+            connection.Open();
+            try
+            {
+
+                string query = "insert into bangxephang values ('" + user + "',0,0,0,0)";
                 cmd.CommandText = query;
                 cmd.ExecuteNonQuery();
             }

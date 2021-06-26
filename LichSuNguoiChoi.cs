@@ -42,12 +42,7 @@ namespace pong
 
         private void xoalichsu_Click(object sender, EventArgs e)
         {
-            DatabaseControler.Instance.xoalichsu(DangNhap.user);
-            DatabaseControler.Instance.updateHighscore("0",DangNhap.user);
-            MessageBox.Show("Đã xóa lịch sử thành công");
-            GiaoDienDaDangKi f =new  GiaoDienDaDangKi();
-            f.Show();
-            this.Close();
+            
         }
 
         private void lichsu_Click_1(object sender, EventArgs e)

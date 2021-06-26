@@ -41,11 +41,11 @@ namespace pong
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Cooper BlkIt BT", 30F);
+            this.label1.Font = new System.Drawing.Font("Dutch801 XBd BT", 30F);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(181, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(333, 51);
+            this.label1.Size = new System.Drawing.Size(316, 50);
             this.label1.TabIndex = 2;
             this.label1.Text = "INSTRUCTION";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -58,9 +58,9 @@ namespace pong
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Courier New", 16.2F);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(50, 73);
+            this.label2.Location = new System.Drawing.Point(50, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(578, 286);
+            this.label2.Size = new System.Drawing.Size(578, 267);
             this.label2.TabIndex = 3;
             this.label2.Text = resources.GetString("label2.Text");
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -72,7 +72,7 @@ namespace pong
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Cooper BlkIt BT", 13F);
+            this.button1.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Location = new System.Drawing.Point(566, 12);
             this.button1.Name = "button1";

@@ -44,7 +44,7 @@ namespace pong
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
-            this.button1.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
+            this.button1.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(403, 50);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
@@ -71,19 +71,19 @@ namespace pong
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
+            this.label1.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(22, 59);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 23);
+            this.label1.Size = new System.Drawing.Size(48, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "IP :";
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
-            this.button2.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
+            this.button2.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(17, 245);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
@@ -111,7 +111,7 @@ namespace pong
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
+            this.groupBox1.Font = new System.Drawing.Font("Dutch801 XBd BT", 14F);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(17, 100);
             this.groupBox1.Name = "groupBox1";
@@ -126,11 +126,11 @@ namespace pong
             this.quaylai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
             this.quaylai.FlatAppearance.BorderColor = System.Drawing.Color.Honeydew;
             this.quaylai.FlatAppearance.BorderSize = 0;
-            this.quaylai.Font = new System.Drawing.Font("Cooper BlkIt BT", 15F);
+            this.quaylai.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.quaylai.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.quaylai.Location = new System.Drawing.Point(478, 12);
             this.quaylai.Name = "quaylai";
-            this.quaylai.Size = new System.Drawing.Size(97, 32);
+            this.quaylai.Size = new System.Drawing.Size(97, 39);
             this.quaylai.TabIndex = 9;
             this.quaylai.Text = "Back";
             this.quaylai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

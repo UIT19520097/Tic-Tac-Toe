@@ -43,7 +43,7 @@ namespace pong
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
-            this.textBox1.Font = new System.Drawing.Font("Cooper BlkIt BT", 16.2F);
+            this.textBox1.Font = new System.Drawing.Font("Dutch801 XBd BT", 16.2F);
             this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(171, 114);
             this.textBox1.Multiline = true;
@@ -56,7 +56,7 @@ namespace pong
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
-            this.textBox2.Font = new System.Drawing.Font("Cooper BlkIt BT", 16.2F);
+            this.textBox2.Font = new System.Drawing.Font("Dutch801 XBd BT", 16.2F);
             this.textBox2.ForeColor = System.Drawing.Color.White;
             this.textBox2.Location = new System.Drawing.Point(172, 177);
             this.textBox2.Multiline = true;
@@ -71,11 +71,11 @@ namespace pong
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cooper BlkIt BT", 16.2F);
+            this.label1.Font = new System.Drawing.Font("Dutch801 XBd BT", 16.2F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(22, 126);
+            this.label1.Location = new System.Drawing.Point(42, 123);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 27);
+            this.label1.Size = new System.Drawing.Size(127, 26);
             this.label1.TabIndex = 2;
             this.label1.Text = "Username :";
             // 
@@ -83,11 +83,11 @@ namespace pong
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Cooper BlkIt BT", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Dutch801 XBd BT", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(25, 192);
+            this.label2.Location = new System.Drawing.Point(48, 182);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 27);
+            this.label2.Size = new System.Drawing.Size(119, 26);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password :";
             // 
@@ -96,11 +96,11 @@ namespace pong
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Cooper BlkIt BT", 18F);
+            this.button1.Font = new System.Drawing.Font("Dutch801 XBd BT", 18F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(488, 12);
+            this.button1.Location = new System.Drawing.Point(495, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 38);
+            this.button1.Size = new System.Drawing.Size(112, 44);
             this.button1.TabIndex = 5;
             this.button1.Text = "Sign up";
             this.button1.UseVisualStyleBackColor = false;
@@ -122,11 +122,11 @@ namespace pong
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("Cooper BlkIt BT", 18F);
+            this.button2.Font = new System.Drawing.Font("Dutch801 XBd BT", 18F);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(257, 241);
+            this.button2.Location = new System.Drawing.Point(257, 231);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 38);
+            this.button2.Size = new System.Drawing.Size(128, 49);
             this.button2.TabIndex = 8;
             this.button2.Text = "Sign in";
             this.button2.UseVisualStyleBackColor = false;

@@ -41,6 +41,7 @@ namespace pong
             this.highscore = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@ namespace pong
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
+            this.button6.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.button6.ForeColor = System.Drawing.SystemColors.Window;
             this.button6.Location = new System.Drawing.Point(671, 394);
             this.button6.Name = "button6";
@@ -68,11 +69,11 @@ namespace pong
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
+            this.button3.Font = new System.Drawing.Font("Dutch801 XBd BT", 10F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(270, 199);
+            this.button3.Location = new System.Drawing.Point(12, 40);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(278, 52);
+            this.button3.Size = new System.Drawing.Size(160, 46);
             this.button3.TabIndex = 6;
             this.button3.Text = "CHANGE NAME";
             this.button3.UseVisualStyleBackColor = false;
@@ -86,7 +87,7 @@ namespace pong
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
+            this.button4.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.button4.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.button4.Image = global::pong.Properties.Resources.exit_32;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,9 +109,9 @@ namespace pong
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
+            this.button5.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(270, 260);
+            this.button5.Location = new System.Drawing.Point(270, 199);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(278, 52);
             this.button5.TabIndex = 9;
@@ -125,7 +126,7 @@ namespace pong
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
+            this.button2.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(270, 321);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
@@ -142,7 +143,7 @@ namespace pong
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
+            this.button1.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(270, 137);
@@ -158,20 +159,20 @@ namespace pong
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Cooper BlkIt BT", 16F);
+            this.label2.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(608, 12);
+            this.label2.Location = new System.Drawing.Point(684, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 27);
+            this.label2.Size = new System.Drawing.Size(88, 26);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Highscore : ";
+            this.label2.Text = "Score : ";
             // 
             // tennguoichoi
             // 
             this.tennguoichoi.BackColor = System.Drawing.Color.Transparent;
-            this.tennguoichoi.Font = new System.Drawing.Font("Cooper BlkIt BT", 16F);
+            this.tennguoichoi.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.tennguoichoi.ForeColor = System.Drawing.Color.Transparent;
-            this.tennguoichoi.Location = new System.Drawing.Point(157, 10);
+            this.tennguoichoi.Location = new System.Drawing.Point(135, 10);
             this.tennguoichoi.Name = "tennguoichoi";
             this.tennguoichoi.Size = new System.Drawing.Size(152, 24);
             this.tennguoichoi.TabIndex = 0;
@@ -182,11 +183,11 @@ namespace pong
             // 
             this.highscore.AutoSize = true;
             this.highscore.BackColor = System.Drawing.Color.Transparent;
-            this.highscore.Font = new System.Drawing.Font("Cooper BlkIt BT", 16F);
+            this.highscore.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.highscore.ForeColor = System.Drawing.Color.White;
-            this.highscore.Location = new System.Drawing.Point(752, 12);
+            this.highscore.Location = new System.Drawing.Point(767, 12);
             this.highscore.Name = "highscore";
-            this.highscore.Size = new System.Drawing.Size(26, 27);
+            this.highscore.Size = new System.Drawing.Size(24, 26);
             this.highscore.TabIndex = 8;
             this.highscore.Text = "0";
             this.highscore.Click += new System.EventHandler(this.highscore_Click);
@@ -195,25 +196,43 @@ namespace pong
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cooper BlkIt BT", 16F);
+            this.label1.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(12, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 27);
+            this.label1.Size = new System.Drawing.Size(134, 26);
             this.label1.TabIndex = 5;
-            this.label1.Text = "NickName : ";
+            this.label1.Text = "Nickname : ";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(219, 48);
+            this.pictureBox1.Location = new System.Drawing.Point(219, 57);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(379, 74);
+            this.pictureBox1.Size = new System.Drawing.Size(366, 65);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(270, 261);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(278, 52);
+            this.button7.TabIndex = 12;
+            this.button7.Text = "RANK";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // GiaoDienDaDangKi
             // 
@@ -223,6 +242,7 @@ namespace pong
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(812, 445);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tennguoichoi);
             this.Controls.Add(this.highscore);
@@ -235,9 +255,10 @@ namespace pong
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GiaoDienDaDangKi";
             this.Text = "GAME TIC TAC TOE";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GiaoDienDaDangKi_FormClosing);
             this.Load += new System.EventHandler(this.GiaoDien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -257,5 +278,6 @@ namespace pong
         private System.Windows.Forms.Label highscore;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button7;
     }
 }

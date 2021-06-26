@@ -16,14 +16,19 @@ namespace pong
         public int opsc = 0;
         public int stage = 1;
         bool izHost = true;
+        int round = 3;
+        string useropon = "doithu";
+        int sumscore = DatabaseControler.Instance.getdatabxh("score", DangNhap.user);
+        int win = DatabaseControler.Instance.getdatabxh("win", DangNhap.user);
+        int lose = DatabaseControler.Instance.getdatabxh("lose", DangNhap.user);
+        int draw = DatabaseControler.Instance.getdatabxh("draw", DangNhap.user);
 
-        public Game(bool isHost, string ip = null, int scr = 0)
+        public Game(bool isHost, string ip = null, int scr = 0, int round = 3)
         {
+            InitializeComponent();
             izHost = isHost;
             score = scr;
-
-            
-            InitializeComponent();
+            this.round = round;            
             MessageReceiver.DoWork += MessageReceiver_DoWork;
             CheckForIllegalCrossThreadCalls = false;
             label3.Text = "Score: " + score.ToString();
@@ -63,13 +68,13 @@ namespace pong
             if (CheckState())
             {
                 stage++;
-                if(stage == 3) {
+                if (stage > round) {
                     MessageReceiver.WorkerSupportsCancellation = true;
                     MessageReceiver.CancelAsync();
-                    if (server != null)
-                        server.Stop();
                     FreezeBoard();
                     Final();
+                    if (server != null)
+                        server.Stop();                 
                 }
                 return;
             }
@@ -84,8 +89,25 @@ namespace pong
         }
         private void Final()
         {
-          if (score > opsc) MessageBox.Show(label2.Text + " is the final winner");
-          else if(score == opsc) MessageBox.Show("Its a drawn game");
+            DatabaseControler.Instance.updatebxh("score", sumscore + score, DangNhap.user);
+            if (score > opsc)
+            {
+                MessageBox.Show(label2.Text + " is the final WINNER");
+                DatabaseControler.Instance.insertlichsu(DangNhap.user,useropon,AppControler.LayThoiGian(),"Win",score);
+                DatabaseControler.Instance.updatebxh("win", win + 1, DangNhap.user);                
+            }
+            else if (score == opsc) 
+            {
+                MessageBox.Show("Its a DRAW for both of you, pEaCe");
+                DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Draw",score);
+                DatabaseControler.Instance.updatebxh("draw", draw + 1, DangNhap.user);
+
+            }
+            else if(score < opsc)
+            {
+                DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Lose", score);
+                DatabaseControler.Instance.updatebxh("lose", lose + 1, DangNhap.user);
+            }
         }
 
         private char PlayerChar;
@@ -337,7 +359,17 @@ namespace pong
                 label3.Text = "Score: " + score.ToString();
                 label1.Text = "It's a draw!";
                 MessageBox.Show("It's a draw!");
+                if (stage == round) {
+                    MessageReceiver.WorkerSupportsCancellation = true;
+                    MessageReceiver.CancelAsync();
+                    if (server != null)
+                        server.Stop();
+                    FreezeBoard();
+                    Final();
+                    return true;
+                };
                 if (!izHost) {
+
                     RefreshBoard();
                     //MessageReceiver.RunWorkerAsync();
                     FreezeBoard();
@@ -510,6 +542,11 @@ namespace pong
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
         {
 
         }

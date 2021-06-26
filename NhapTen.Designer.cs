@@ -40,7 +40,7 @@ namespace pong
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
+            this.button1.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
             this.button1.Location = new System.Drawing.Point(192, 213);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
@@ -62,7 +62,7 @@ namespace pong
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Cooper BlkIt BT", 20F);
+            this.textBox1.Font = new System.Drawing.Font("Dutch801 XBd BT", 20F);
             this.textBox1.Location = new System.Drawing.Point(89, 140);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
@@ -76,12 +76,12 @@ namespace pong
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
+            this.label1.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(159, 106);
+            this.label1.Location = new System.Drawing.Point(156, 106);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 23);
+            this.label1.Size = new System.Drawing.Size(234, 26);
             this.label1.TabIndex = 4;
             this.label1.Text = "ENTER YOUR NAME";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);

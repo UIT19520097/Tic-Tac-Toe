@@ -40,16 +40,19 @@
             this.button9 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.button10 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Location = new System.Drawing.Point(9, 7);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 37);
+            this.label1.Size = new System.Drawing.Size(150, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Your Turn!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -146,7 +149,7 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Location = new System.Drawing.Point(8, 206);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -158,23 +161,56 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Location = new System.Drawing.Point(9, 256);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 37);
+            this.label3.Size = new System.Drawing.Size(150, 37);
             this.label3.TabIndex = 0;
             this.label3.Text = "Score:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(196, 46);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(263, 197);
+            this.listView1.TabIndex = 10;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(398, 253);
+            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(59, 37);
+            this.button10.TabIndex = 11;
+            this.button10.Text = "button10";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(196, 252);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(198, 39);
+            this.textBox1.TabIndex = 12;
             // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(170, 300);
+            this.ClientSize = new System.Drawing.Size(478, 300);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button9);
@@ -196,6 +232,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.Load += new System.EventHandler(this.Game_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -213,5 +250,8 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

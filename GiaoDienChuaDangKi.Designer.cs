@@ -78,7 +78,7 @@ namespace pong
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(681, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(750, 27);
             this.bindingNavigator1.TabIndex = 4;
             this.bindingNavigator1.Text = "bindingNavigator1";
             this.bindingNavigator1.Visible = false;
@@ -176,7 +176,7 @@ namespace pong
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
+            this.button2.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::pong.Properties.Resources.contacts_32;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -196,7 +196,7 @@ namespace pong
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
+            this.button1.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::pong.Properties.Resources.edit_user_32;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -216,7 +216,7 @@ namespace pong
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
             this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Font = new System.Drawing.Font("Cooper BlkIt BT", 14F);
+            this.button3.Font = new System.Drawing.Font("Dutch801 XBd BT", 16F);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::pong.Properties.Resources.account_logout_32;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;

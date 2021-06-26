@@ -134,5 +134,16 @@ namespace pong
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Rank f = new Rank();
+            f.Show();
+            this.Close();
+        }
+
+        private void GiaoDienDaDangKi_FormClosing(object sender, FormClosingEventArgs e)
+        {
+        }
     }
 }

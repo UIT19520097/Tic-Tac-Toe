@@ -80,12 +80,18 @@ namespace pong
                 else
                 {
                     DatabaseControler.Instance.insertuser(textBox1.Text, textBox3.Text, textBox2.Text, (AppControler.LayThoiGian()).ToString());
+                    DatabaseControler.Instance.insertbxh(textBox1.Text);
                     MessageBox.Show("Tạo tài khoản thành công");
                     DangNhap f = new DangNhap();
                     f.Show();
                     this.Close();
                 }
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
