@@ -89,9 +89,10 @@ namespace pong
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lichsu.BackColor = System.Drawing.Color.Transparent;
+            this.lichsu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lichsu.Font = new System.Drawing.Font("Cooper BlkIt BT", 20F);
             this.lichsu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lichsu.Location = new System.Drawing.Point(59, 101);
+            this.lichsu.Location = new System.Drawing.Point(56, 93);
             this.lichsu.Name = "lichsu";
             this.lichsu.Size = new System.Drawing.Size(553, 277);
             this.lichsu.TabIndex = 4;
