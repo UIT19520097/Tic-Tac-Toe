@@ -50,7 +50,7 @@ namespace pong
                 server = new TcpListener(System.Net.IPAddress.Any, 5732);
                 server.Start();
                 sock = server.AcceptSocket();
-                label2.Text = "Username: Admin";
+                label2.Text = DangNhap.user;
                 this.BackColor = Color.SkyBlue;
             }
             else
@@ -61,7 +61,7 @@ namespace pong
                 {
                     client = new TcpClient(ip, 5732);
                     sock = client.Client;
-                    label2.Text = "Username: Client";
+                    label2.Text = DangNhap.user;
                     MessageReceiver.RunWorkerAsync();
                 }
                 catch(Exception ex)
@@ -78,14 +78,6 @@ namespace pong
             if (CheckState())
             {
                 stage++;
-                if (stage > round) {
-                    MessageReceiver.WorkerSupportsCancellation = true;
-                    MessageReceiver.CancelAsync();
-                    FreezeBoard();
-                    Final();
-                    if (server != null)
-                        server.Stop();                 
-                }
                 return;
             }
             FreezeBoard();
@@ -560,10 +552,10 @@ namespace pong
         {
             UdpClient udp = new UdpClient();
             IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), Port);
-            byte[] msg = Encoding.UTF8.GetBytes(textBox1.Text);
+            byte[] msg = Encoding.UTF8.GetBytes(DangNhap.user +": " +textBox1.Text);
             udp.Send(msg, msg.Length, iPEndPoint);
 
-            listView1.Items.Add("user1:" + textBox1.Text);
+            listView1.Items.Add(DangNhap.user + ": " + textBox1.Text);
             textBox1.Clear();
         }
         public void serverThread()
@@ -577,7 +569,7 @@ namespace pong
                 IPEndPoint ipEndPoint = new IPEndPoint(IPAddress.Any, 0);
                 byte[] mes = udpClient.Receive(ref ipEndPoint);
                 string message = Encoding.UTF8.GetString(mes);
-                listView1.Items.Add(ipEndPoint.Address.ToString() + ": " + message);
+                listView1.Items.Add( message);
             }
         }
         
@@ -588,6 +580,16 @@ namespace pong
             byte[] msg = Encoding.UTF8.GetBytes("DOI THU DA BO CHAY!!! 🤣🤣🤣");
             udp.Send(msg, msg.Length, iPEndPoint);
             this.Close();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

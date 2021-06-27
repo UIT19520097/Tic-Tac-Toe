@@ -45,6 +45,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -152,23 +153,23 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Location = new System.Drawing.Point(11, 254);
+            this.label2.Location = new System.Drawing.Point(80, 254);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 46);
+            this.label2.Size = new System.Drawing.Size(119, 46);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Username:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Location = new System.Drawing.Point(12, 315);
+            this.label3.Location = new System.Drawing.Point(37, 311);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(200, 46);
+            this.label3.Size = new System.Drawing.Size(107, 46);
             this.label3.TabIndex = 0;
             this.label3.Text = "Score:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // listView1
@@ -181,6 +182,7 @@
             this.listView1.TabIndex = 10;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // button10
             // 
@@ -223,12 +225,24 @@
             this.label4.Size = new System.Drawing.Size(0, 17);
             this.label4.TabIndex = 14;
             // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Location = new System.Drawing.Point(12, 254);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 46);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Username:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(637, 394);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.textBox1);
@@ -276,5 +290,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
