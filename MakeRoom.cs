@@ -33,5 +33,16 @@ namespace pong
                 newGame.ShowDialog();
             Visible = true;
         }
+
+        private void quaylai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MakeRoom_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            GiaoDienDaDangKi f = new GiaoDienDaDangKi();
+            f.Show();
+        }
     }
 }

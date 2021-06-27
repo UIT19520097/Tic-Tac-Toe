@@ -23,13 +23,8 @@ namespace pong
         public int stage = 1;
         bool izHost = true;
         int round = 3;
-        string useropon = "doithu";
         int Port = 8080;
-        int sumscore = DatabaseControler.Instance.getdatabxh("score", DangNhap.user);
-        int win = DatabaseControler.Instance.getdatabxh("win", DangNhap.user);
-        int lose = DatabaseControler.Instance.getdatabxh("lose", DangNhap.user);
-        int draw = DatabaseControler.Instance.getdatabxh("draw", DangNhap.user);
-
+        string useropon = "doithu";
         public Game(bool isHost, string ip = null, int scr = 0, int round = 3, int port=8080)
         {
             this.ControlBox = false;
@@ -77,7 +72,7 @@ namespace pong
             
             if (CheckState())
             {
-                stage++;
+                stage++;             
                 return;
             }
             FreezeBoard();
@@ -89,29 +84,6 @@ namespace pong
             if (!CheckState())
                 UnfreezeBoard();
         }
-        private void Final()
-        {
-            DatabaseControler.Instance.updatebxh("score", sumscore + score, DangNhap.user);
-            if (score > opsc)
-            {
-                MessageBox.Show(label2.Text + " is the final WINNER");
-                DatabaseControler.Instance.insertlichsu(DangNhap.user,useropon,AppControler.LayThoiGian(),"Win",score);
-                DatabaseControler.Instance.updatebxh("win", win + 1, DangNhap.user);                
-            }
-            else if (score == opsc) 
-            {
-                MessageBox.Show("Its a DRAW for both of you, pEaCe");
-                DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Draw",score);
-                DatabaseControler.Instance.updatebxh("draw", draw + 1, DangNhap.user);
-
-            }
-            else if(score < opsc)
-            {
-                DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Lose", score);
-                DatabaseControler.Instance.updatebxh("lose", lose + 1, DangNhap.user);
-            }
-        }
-
         private char PlayerChar;
         private char OpponentChar;
         private Socket sock;
@@ -129,14 +101,23 @@ namespace pong
                 //FreezeBoard();
                 if (button1.Text[0] == PlayerChar)
                 {
+                    int win = DatabaseControler.Instance.getdatabxh("win", DangNhap.user);
+                    int sumscore = DatabaseControler.Instance.getdatabxh("score", DangNhap.user);
+                    DatabaseControler.Instance.updatebxh("score", sumscore + 3, DangNhap.user);
+                    DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Win", 3);
+                    DatabaseControler.Instance.updatebxh("win", win + 1, DangNhap.user);                    
                     score += 3;
                     label3.Text = "Score: " + score.ToString();
                     label1.Text = "You Won!";
                     MessageBox.Show("You Won!");
                     RefreshBoard();
+                    
                 }
                 else
                 {
+                    int lose = DatabaseControler.Instance.getdatabxh("lose", DangNhap.user);
+                    DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Lose", 0);
+                    DatabaseControler.Instance.updatebxh("lose", lose + 1, DangNhap.user);
                     opsc += 3;   
                     label1.Text = "You Lost!";
                     MessageBox.Show("You Lost!");
@@ -158,6 +139,11 @@ namespace pong
                // FreezeBoard();
                 if (button4.Text[0] == PlayerChar)
                 {
+                    int win = DatabaseControler.Instance.getdatabxh("win", DangNhap.user);
+                    int sumscore = DatabaseControler.Instance.getdatabxh("score", DangNhap.user);
+                    DatabaseControler.Instance.updatebxh("score", sumscore + 3, DangNhap.user);
+                    DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Win", 3);
+                    DatabaseControler.Instance.updatebxh("win", win + 1, DangNhap.user);
                     score += 3;
                     label3.Text = "Score: " + score.ToString();
                     label1.Text = "You Won!";
@@ -166,6 +152,9 @@ namespace pong
                 }
                 else
                 {
+                    int lose = DatabaseControler.Instance.getdatabxh("lose", DangNhap.user);
+                    DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Lose", 0);
+                    DatabaseControler.Instance.updatebxh("lose", lose + 1, DangNhap.user);
                     opsc += 3;
                     label1.Text = "You Lost!";
                     MessageBox.Show("You Lost!");
@@ -187,6 +176,11 @@ namespace pong
                // FreezeBoard();
                 if (button7.Text[0] == PlayerChar)
                 {
+                    int win = DatabaseControler.Instance.getdatabxh("win", DangNhap.user);
+                    int sumscore = DatabaseControler.Instance.getdatabxh("score", DangNhap.user);
+                    DatabaseControler.Instance.updatebxh("score", sumscore + 3, DangNhap.user);
+                    DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Win", 3);
+                    DatabaseControler.Instance.updatebxh("win", win + 1, DangNhap.user);
                     score += 3;
                     label3.Text = "Score: " + score.ToString();
                     label1.Text = "You Won!";
@@ -195,6 +189,9 @@ namespace pong
                 }
                 else
                 {
+                    int lose = DatabaseControler.Instance.getdatabxh("lose", DangNhap.user);
+                    DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Lose", 0);
+                    DatabaseControler.Instance.updatebxh("lose", lose + 1, DangNhap.user);
                     opsc += 3;
                     label1.Text = "You Lost!";
                     MessageBox.Show("You Lost!");
@@ -216,6 +213,11 @@ namespace pong
                // FreezeBoard();
                 if (button1.Text[0] == PlayerChar)
                 {
+                    int win = DatabaseControler.Instance.getdatabxh("win", DangNhap.user);
+                    int sumscore = DatabaseControler.Instance.getdatabxh("score", DangNhap.user);
+                    DatabaseControler.Instance.updatebxh("score", sumscore + 3, DangNhap.user);
+                    DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Win", 3);
+                    DatabaseControler.Instance.updatebxh("win", win + 1, DangNhap.user);
                     score += 3;
                     label3.Text = "Score: " + score.ToString();
                     label1.Text = "You Won!";
@@ -224,6 +226,9 @@ namespace pong
                 }
                 else
                 {
+                    int lose = DatabaseControler.Instance.getdatabxh("lose", DangNhap.user);
+                    DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Lose", 0);
+                    DatabaseControler.Instance.updatebxh("lose", lose + 1, DangNhap.user);
                     opsc += 3;
                     label1.Text = "You Lost!";
                     MessageBox.Show("You Lost!");
@@ -245,6 +250,11 @@ namespace pong
                // FreezeBoard();
                 if (button2.Text[0] == PlayerChar)
                 {
+                    int win = DatabaseControler.Instance.getdatabxh("win", DangNhap.user);
+                    int sumscore = DatabaseControler.Instance.getdatabxh("score", DangNhap.user);
+                    DatabaseControler.Instance.updatebxh("score", sumscore + 3, DangNhap.user);
+                    DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Win", 3);
+                    DatabaseControler.Instance.updatebxh("win", win + 1, DangNhap.user);
                     score += 3;
                     label3.Text = "Score: " + score.ToString();
                     label1.Text = "You Won!";
@@ -253,6 +263,10 @@ namespace pong
                 }
                 else
                 {
+                    int lose = DatabaseControler.Instance.getdatabxh("lose", DangNhap.user);
+
+                    DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Lose", 0);
+                    DatabaseControler.Instance.updatebxh("lose", lose + 1, DangNhap.user);
                     opsc += 3;
                     label1.Text = "You Lost!";
                     MessageBox.Show("You Lost!");
@@ -273,6 +287,11 @@ namespace pong
               // FreezeBoard();
                 if (button3.Text[0] == PlayerChar)
                 {
+                    int win = DatabaseControler.Instance.getdatabxh("win", DangNhap.user);
+                    int sumscore = DatabaseControler.Instance.getdatabxh("score", DangNhap.user);
+                    DatabaseControler.Instance.updatebxh("score", sumscore + 3, DangNhap.user);
+                    DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Win", 3);
+                    DatabaseControler.Instance.updatebxh("win", win + 1, DangNhap.user);
                     score += 3;
                     label3.Text = "Score: " + score.ToString();
                     label1.Text = "You Won!";
@@ -281,6 +300,9 @@ namespace pong
                 }
                 else
                 {
+                    int lose = DatabaseControler.Instance.getdatabxh("lose", DangNhap.user);
+                    DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Lose", 0);
+                    DatabaseControler.Instance.updatebxh("lose", lose + 1, DangNhap.user);
                     opsc += 3;
                     label1.Text = "You Lost!";
                     MessageBox.Show("You Lost!");
@@ -301,6 +323,11 @@ namespace pong
                // FreezeBoard();
                 if (button1.Text[0] == PlayerChar)
                 {
+                    int win = DatabaseControler.Instance.getdatabxh("win", DangNhap.user);
+                    int sumscore = DatabaseControler.Instance.getdatabxh("score", DangNhap.user);
+                    DatabaseControler.Instance.updatebxh("score", sumscore + 3, DangNhap.user);
+                    DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Win", 3);
+                    DatabaseControler.Instance.updatebxh("win", win + 1, DangNhap.user);
                     score += 3;
                     label3.Text = "Score: " + score.ToString();
                     label1.Text = "You Won!";
@@ -309,6 +336,9 @@ namespace pong
                 }
                 else
                 {
+                    int lose = DatabaseControler.Instance.getdatabxh("lose", DangNhap.user);
+                    DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Lose", 0);
+                    DatabaseControler.Instance.updatebxh("lose", lose + 1, DangNhap.user);
                     opsc += 3;
                     label1.Text = "You Lost!";
                     MessageBox.Show("You Lost!");
@@ -329,6 +359,11 @@ namespace pong
                // FreezeBoard();
                 if (button3.Text[0] == PlayerChar)
                 {
+                    int win = DatabaseControler.Instance.getdatabxh("win", DangNhap.user);
+                    int sumscore = DatabaseControler.Instance.getdatabxh("score", DangNhap.user);
+                    DatabaseControler.Instance.updatebxh("score", sumscore + 3, DangNhap.user);
+                    DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Win", 3);
+                    DatabaseControler.Instance.updatebxh("win", win + 1, DangNhap.user);
                     score += 3;
                     label3.Text = "Score: " + score.ToString();
                     label1.Text = "You Won!";
@@ -337,6 +372,9 @@ namespace pong
                 }
                 else
                 {
+                    int lose = DatabaseControler.Instance.getdatabxh("lose", DangNhap.user);
+                    DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Lose", 0);
+                    DatabaseControler.Instance.updatebxh("lose", lose + 1, DangNhap.user);
                     opsc += 3;
                     label1.Text = "You Lost!";
                     MessageBox.Show("You Lost!");
@@ -355,21 +393,18 @@ namespace pong
             //Draw
             else if(button1.Text != "" && button2.Text != "" && button3.Text != "" && button4.Text != "" && button5.Text != "" && button6.Text != "" && button7.Text != "" && button8.Text != "" && button9.Text != "")
             {
-              //  FreezeBoard();
+                //  FreezeBoard();
+                int draw = DatabaseControler.Instance.getdatabxh("draw", DangNhap.user);
+                int sumscore = DatabaseControler.Instance.getdatabxh("score", DangNhap.user);
+                DatabaseControler.Instance.updatebxh("score", sumscore + 1, DangNhap.user);
+                DatabaseControler.Instance.insertlichsu(DangNhap.user, useropon, AppControler.LayThoiGian(), "Draw", 1);
+                DatabaseControler.Instance.updatebxh("draw", draw + 1, DangNhap.user);
                 score += 1;
                 opsc += 1;
                 label3.Text = "Score: " + score.ToString();
                 label1.Text = "It's a draw!";
+                
                 MessageBox.Show("It's a draw!");
-                if (stage == round) {
-                    MessageReceiver.WorkerSupportsCancellation = true;
-                    MessageReceiver.CancelAsync();
-                    if (server != null)
-                        server.Stop();
-                    FreezeBoard();
-                    Final();
-                    return true;
-                };
                 if (!izHost) {
 
                     RefreshBoard();

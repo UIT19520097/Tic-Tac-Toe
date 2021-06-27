@@ -135,6 +135,7 @@ namespace pong
             this.quaylai.Text = "Back";
             this.quaylai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.quaylai.UseVisualStyleBackColor = false;
+            this.quaylai.Click += new System.EventHandler(this.quaylai_Click);
             // 
             // MakeRoom
             // 
@@ -149,6 +150,7 @@ namespace pong
             this.Controls.Add(this.groupBox1);
             this.Name = "MakeRoom";
             this.Text = "makeroom";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MakeRoom_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

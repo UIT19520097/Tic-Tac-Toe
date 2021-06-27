@@ -69,7 +69,7 @@ namespace pong
             connection.Open();
             try
             {
-                string query = "select doithu,thoigian,result,score from lichsu where taikhoan='" + taikhoan + "'order by score DESC";
+                string query = "select doithu,thoigian,result,bonusscore from lichsu where taikhoan='" + taikhoan + "' order by thoigian asc" ;
                 cmd.CommandText = query;
                 SqlDataReader dataReader = cmd.ExecuteReader();
                 while (dataReader.Read())
@@ -79,7 +79,7 @@ namespace pong
                     cont[0] = dataReader[0].ToString();
                     cont[1] = dataReader[1].ToString();
                     cont[2] = dataReader[2].ToString();
-                    cont[3] = dataReader[3].ToString();
+                    cont[3] = "+ "+dataReader[3].ToString();
                     lvi = new ListViewItem(cont);
                     listView1.Items.Add(lvi);
                 }

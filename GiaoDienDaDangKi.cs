@@ -81,6 +81,7 @@ namespace pong
             Console.Beep();
             NhapTen f = new NhapTen();
             f.Show();
+            this.Close();
         }
 
         private void highscore_Click(object sender, EventArgs e)
