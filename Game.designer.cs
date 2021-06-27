@@ -55,7 +55,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 46);
+            this.label1.Size = new System.Drawing.Size(208, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "Your Turn!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,9 +154,9 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Location = new System.Drawing.Point(91, 254);
+            this.label2.Location = new System.Drawing.Point(118, 254);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 46);
+            this.label2.Size = new System.Drawing.Size(127, 46);
             this.label2.TabIndex = 0;
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -167,7 +167,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Location = new System.Drawing.Point(12, 310);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 46);
+            this.label3.Size = new System.Drawing.Size(115, 46);
             this.label3.TabIndex = 0;
             this.label3.Text = "Score:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -232,7 +232,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.Location = new System.Drawing.Point(12, 254);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 46);
+            this.label5.Size = new System.Drawing.Size(85, 46);
             this.label5.TabIndex = 15;
             this.label5.Text = "Username:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -240,7 +240,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(261, 358);
+            this.checkBox1.Location = new System.Drawing.Point(261, 362);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(86, 21);
             this.checkBox1.TabIndex = 16;
@@ -253,7 +253,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(637, 394);
+            this.ClientSize = new System.Drawing.Size(645, 409);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
