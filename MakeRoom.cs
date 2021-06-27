@@ -18,7 +18,7 @@ namespace pong
 
         private void button2_Click(object sender, EventArgs e)
         { 
-            Game newGame = new Game(true);
+            Game newGame = new Game(true, textBox1.Text, 0,3,8080);
             Visible = false;
             if (!newGame.IsDisposed)
                 newGame.ShowDialog();
@@ -27,7 +27,7 @@ namespace pong
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Game newGame = new Game(false, textBox1.Text);
+            Game newGame = new Game(false, textBox1.Text, 0, 3, 8000);
             Visible = false;
             if (!newGame.IsDisposed)
                 newGame.ShowDialog();

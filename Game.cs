@@ -5,8 +5,14 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
 using System.Net.Sockets;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Threading;
+
 
 namespace pong
 {
@@ -18,15 +24,18 @@ namespace pong
         bool izHost = true;
         int round = 3;
         string useropon = "doithu";
+        int Port = 8080;
         int sumscore = DatabaseControler.Instance.getdatabxh("score", DangNhap.user);
         int win = DatabaseControler.Instance.getdatabxh("win", DangNhap.user);
         int lose = DatabaseControler.Instance.getdatabxh("lose", DangNhap.user);
         int draw = DatabaseControler.Instance.getdatabxh("draw", DangNhap.user);
 
-        public Game(bool isHost, string ip = null, int scr = 0, int round = 3)
+        public Game(bool isHost, string ip = null, int scr = 0, int round = 3, int port=8080)
         {
+            Port = port;
             InitializeComponent();
-            izHost = isHost;
+            Thread thdudpServer = new Thread(new ThreadStart(serverThread));
+            thdudpServer.Start();
             score = scr;
             this.round = round;            
             MessageReceiver.DoWork += MessageReceiver_DoWork;
@@ -548,12 +557,28 @@ namespace pong
 
         private void button10_Click(object sender, EventArgs e)
         {
+            UdpClient udp = new UdpClient();
+            IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), Port);
+            byte[] msg = Encoding.UTF8.GetBytes(textBox1.Text);
+            udp.Send(msg, msg.Length, iPEndPoint);
 
+            listView1.Items.Add("user1:" + textBox1.Text);
+            textBox1.Clear();
         }
-
-        private void Game_Load(object sender, EventArgs e)
+        public void serverThread()
         {
-
+            int port2 = 8000;
+            if (Port == 8000)
+                port2 = 8080;
+            UdpClient udpClient = new UdpClient(port2);
+            while (true)
+            {
+                IPEndPoint ipEndPoint = new IPEndPoint(IPAddress.Any, 0);
+                byte[] mes = udpClient.Receive(ref ipEndPoint);
+                string message = Encoding.UTF8.GetString(mes);
+                listView1.Items.Add(ipEndPoint.Address.ToString() + ": " + message);
+            }
         }
+        
     }
 }
