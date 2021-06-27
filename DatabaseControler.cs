@@ -95,13 +95,13 @@ namespace pong
             }
             connection.Close();
         }
-        public string select(string value,string taikhoan) // lấy dữ liệu value
+        public string select(string value,string table,string taikhoan) // lấy dữ liệu value
         {
             string res="";
             connection.Open();
             try
             {
-                string query = "select " + value + " from userpass where taikhoan='" + taikhoan + "'";
+                string query = "select " + value + " from "+table+ " where taikhoan = '" + taikhoan + "'";
                 cmd.CommandText = query;
                 SqlDataReader dataReader = cmd.ExecuteReader();//ExecuteReader dùng khi cần lấy giá trị trả về
                 dataReader.Read();
