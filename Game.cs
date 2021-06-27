@@ -46,7 +46,7 @@ namespace pong
                 server = new TcpListener(System.Net.IPAddress.Any, 5732);
                 server.Start();
                 sock = server.AcceptSocket();
-                label2.Text = DangNhap.user;
+                label5.Text ="Username: "+ DangNhap.user;
                 this.BackColor = Color.SkyBlue;
             }
             else
@@ -57,7 +57,7 @@ namespace pong
                 {
                     client = new TcpClient(ip, 5732);
                     sock = client.Client;
-                    label2.Text = DangNhap.user;
+                    label5.Text = "Username: " + DangNhap.user;
                     MessageReceiver.RunWorkerAsync();
                 }
                 catch(Exception ex)
@@ -692,6 +692,21 @@ namespace pong
                 player.Stop();
                 checkBox1.Text = "Music on";
             }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Game_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -46,12 +46,11 @@ namespace pong
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.label1.Font = new System.Drawing.Font("Dutch801 XBd BT", 30F);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(336, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(252, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 60);
+            this.label1.Size = new System.Drawing.Size(212, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "HISTORY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -63,12 +62,11 @@ namespace pong
             this.quaylai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
             this.quaylai.FlatAppearance.BorderColor = System.Drawing.Color.Honeydew;
             this.quaylai.FlatAppearance.BorderSize = 0;
-            this.quaylai.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
+            this.quaylai.Font = new System.Drawing.Font("Dutch801 XBd BT", 17F);
             this.quaylai.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.quaylai.Location = new System.Drawing.Point(791, 15);
-            this.quaylai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.quaylai.Location = new System.Drawing.Point(593, 12);
             this.quaylai.Name = "quaylai";
-            this.quaylai.Size = new System.Drawing.Size(165, 52);
+            this.quaylai.Size = new System.Drawing.Size(124, 42);
             this.quaylai.TabIndex = 1;
             this.quaylai.Text = "Back";
             this.quaylai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -86,13 +84,12 @@ namespace pong
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader8});
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.listView1.Font = new System.Drawing.Font("Dutch801 XBd BT", 15F);
             this.listView1.ForeColor = System.Drawing.SystemColors.Info;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(41, 91);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Location = new System.Drawing.Point(31, 74);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(891, 432);
+            this.listView1.Size = new System.Drawing.Size(669, 352);
             this.listView1.TabIndex = 10;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -122,17 +119,16 @@ namespace pong
             // 
             // LichSuNguoiChoi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(972, 564);
+            this.ClientSize = new System.Drawing.Size(729, 458);
             this.Controls.Add(this.quaylai);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LichSuNguoiChoi";
             this.Text = "LichSuNguoiChoi";
             this.Load += new System.EventHandler(this.LichSuNguoiChoi_Load);
