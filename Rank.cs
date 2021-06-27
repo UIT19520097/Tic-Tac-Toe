@@ -15,7 +15,7 @@ namespace pong
         {
             InitializeComponent();
         }
-        private static string datasource = "Server=PC-PC;Database=TicTacToe;Trusted_Connection=True;";
+        private static string datasource = "Server=DESKTOP-660T5RV;Database=TicTacToe;Trusted_Connection=True;";
         private static SqlConnection connection;
         private static SqlCommand cmd;
 

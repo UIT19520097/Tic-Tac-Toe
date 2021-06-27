@@ -29,6 +29,8 @@ namespace pong
         {
             this.ControlBox = false;
             Port = port;
+            izHost = isHost;
+
             InitializeComponent();
             Thread thdudpServer = new Thread(new ThreadStart(serverThread));
             thdudpServer.Start();
@@ -127,6 +129,8 @@ namespace pong
                     label1.Text = "Opponent's Turn!";
                     this.BackColor = Color.IndianRed;
                     ReceiveMove();
+                    label1.Text = "Your Turn!";
+                    this.BackColor = Color.SkyBlue;
                     if (!CheckState())
                         UnfreezeBoard();
                 }
@@ -164,6 +168,8 @@ namespace pong
                     label1.Text = "Opponent's Turn!";
                     this.BackColor = Color.IndianRed;
                     ReceiveMove();
+                    label1.Text = "Your Turn!";
+                    this.BackColor = Color.SkyBlue;
                     if (!CheckState())
                         UnfreezeBoard();
 
@@ -201,6 +207,8 @@ namespace pong
                     label1.Text = "Opponent's Turn!";
                     this.BackColor = Color.IndianRed;
                     ReceiveMove();
+                    label1.Text = "Your Turn!";
+                    this.BackColor = Color.SkyBlue;
                     if (!CheckState())
                         UnfreezeBoard();
                 }
@@ -238,6 +246,8 @@ namespace pong
                     label1.Text = "Opponent's Turn!";
                     this.BackColor = Color.IndianRed;
                     ReceiveMove();
+                    label1.Text = "Your Turn!";
+                    this.BackColor = Color.SkyBlue;
                     if (!CheckState())
                         UnfreezeBoard();
 
@@ -276,6 +286,8 @@ namespace pong
                     label1.Text = "Opponent's Turn!";
                     this.BackColor = Color.IndianRed;
                     ReceiveMove();
+                    label1.Text = "Your Turn!";
+                    this.BackColor = Color.SkyBlue;
                     if (!CheckState())
                         UnfreezeBoard();
                 }
@@ -312,6 +324,8 @@ namespace pong
                     label1.Text = "Opponent's Turn!";
                     this.BackColor = Color.IndianRed;
                     ReceiveMove();
+                    label1.Text = "Your Turn!";
+                    this.BackColor = Color.SkyBlue;
                     if (!CheckState())
                         UnfreezeBoard();
                 }
@@ -347,7 +361,9 @@ namespace pong
                     FreezeBoard();
                     label1.Text = "Opponent's Turn!";
                     this.BackColor = Color.IndianRed;
-                    ReceiveMove();
+                    ReceiveMove(); 
+                    label1.Text = "Your Turn!";
+                    this.BackColor = Color.SkyBlue;
                     if (!CheckState())
                         UnfreezeBoard();
                 }
@@ -384,6 +400,8 @@ namespace pong
                     label1.Text = "Opponent's Turn!";
                     this.BackColor = Color.IndianRed;
                     ReceiveMove();
+                    label1.Text = "Your Turn!";
+                    this.BackColor = Color.SkyBlue;
                     if (!CheckState())
                         UnfreezeBoard();
                 }
@@ -413,8 +431,11 @@ namespace pong
                     label1.Text = "Opponent's Turn!";
                     this.BackColor = Color.IndianRed;
                     ReceiveMove();
+                    label1.Text = "Your Turn!";
+                    this.BackColor = Color.SkyBlue;
                     if (!CheckState())
                         UnfreezeBoard();
+                    return true;
                 }
                 else RefreshBoard();
                 return true;
