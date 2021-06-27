@@ -15,6 +15,7 @@ namespace pong
         public DangNhap()
         {
             InitializeComponent();
+            label3.Text = "";
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -64,23 +65,29 @@ namespace pong
         {
             if (DatabaseControler.Instance.checktaikhoan(textBox1.Text) == false)
             {
-                MessageBox.Show("Tài khoản chưa tồn tại");
+               label3.Text= "Non-existing username!";
             }
             else
             {
-                if (DatabaseControler.Instance.checkpass(textBox2.Text) == false)
+                if (DatabaseControler.Instance.checkpass(textBox2.Text, textBox1.Text) == false)
                 {
-                    MessageBox.Show("Sai mật khẩu");
+                    label3.Text = "Invalid password!";
+                    textBox2.Text = "";
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thành công");
+                    
                     user = textBox1.Text;
                     GiaoDienDaDangKi f = new GiaoDienDaDangKi();
                     f.Show();
                     this.Close();
                 }
             }
+        }
+
+        private void DangNhap_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

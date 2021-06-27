@@ -203,11 +203,11 @@ namespace pong
             connection.Close();
             return kiemtra;
         }
-        public bool checkpass(string pass)//kiểm tra mật khẩu đăng nhập đúng không
+        public bool checkpass(string pass, string taikhoan)//kiểm tra mật khẩu đăng nhập đúng không
         {
             bool kiemtra;
             connection.Open();
-            string query = "select * from userpass where matkhau='" + pass + "'";
+            string query = "select * from userpass where matkhau='" + pass + "' and taikhoan='"+ taikhoan + "'";
             cmd.CommandText = query;
             SqlDataReader reader = cmd.ExecuteReader();
             kiemtra = reader.Read();// kiemtra= true là có dữ liệu, = false là không có dữ liệu                   

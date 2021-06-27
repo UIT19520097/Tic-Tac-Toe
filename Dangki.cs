@@ -14,6 +14,7 @@ namespace pong
         public Dangki()
         {
             InitializeComponent();
+            label6.Text = "";
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -69,22 +70,34 @@ namespace pong
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (DatabaseControler.Instance.checktaikhoan(textBox1.Text))
+            if ((textBox1.Text == "") || (textBox1.Text == "") || (textBox3.Text == "") || (textBox4.Text == ""))
             {
-                MessageBox.Show("Tài khoản đã tồn tại");
+                label6.Text = "Please fill in all the fields! PeAcE";
             }
             else
             {
-                if (checkpass() == false)
-                    MessageBox.Show("Hai mật khẩu không trùng khớp");
+                if (DatabaseControler.Instance.checktaikhoan(textBox1.Text))
+                {
+                    textBox1.Text = textBox3.Text = textBox4.Text = "";
+                    label6.Text = "Existing username!";
+                }
                 else
                 {
-                    DatabaseControler.Instance.insertuser(textBox1.Text, textBox3.Text, textBox2.Text, (AppControler.LayThoiGian()).ToString());
-                    DatabaseControler.Instance.insertbxh(textBox1.Text);
-                    MessageBox.Show("Tạo tài khoản thành công");
-                    DangNhap f = new DangNhap();
-                    f.Show();
-                    this.Close();
+                    if (checkpass() == false)
+                    {
+                        textBox3.Text = textBox4.Text = "";
+                        label6.Text = "Unmatching passwords!";
+                    }
+
+                    else
+                    {
+                        DatabaseControler.Instance.insertuser(textBox1.Text, textBox3.Text, textBox2.Text, (AppControler.LayThoiGian()).ToString());
+                        DatabaseControler.Instance.insertbxh(textBox1.Text);
+                        //MessageBox.Show("Tạo tài khoản thành công");
+                        DangNhap f = new DangNhap();
+                        f.Show();
+                        this.Close();
+                    }
                 }
             }
         }
