@@ -32,6 +32,7 @@ namespace pong
 
         public Game(bool isHost, string ip = null, int scr = 0, int round = 3, int port=8080)
         {
+            this.ControlBox = false;
             Port = port;
             InitializeComponent();
             Thread thdudpServer = new Thread(new ThreadStart(serverThread));
@@ -580,5 +581,13 @@ namespace pong
             }
         }
         
+        private void button11_Click(object sender, EventArgs e)
+        {
+            UdpClient udp = new UdpClient();
+            IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), Port);
+            byte[] msg = Encoding.UTF8.GetBytes("DOI THU DA BO CHAY!!!");
+            udp.Send(msg, msg.Length, iPEndPoint);
+            this.Close();
+        }
     }
 }
