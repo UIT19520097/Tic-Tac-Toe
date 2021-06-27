@@ -81,7 +81,6 @@ namespace pong
             Console.Beep();
             NhapTen f = new NhapTen();
             f.Show();
-            this.Close();
         }
 
         private void highscore_Click(object sender, EventArgs e)
@@ -98,19 +97,19 @@ namespace pong
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if(button6.Text == "Tắt nhạc")
+            if(button6.Text == "Music off")
             {
                 System.Media.SoundPlayer player = new System.Media.SoundPlayer();
                 player.SoundLocation = "FILE_20210513_221817_MusicGamePingpong.wav";
                 player.Stop();
-                button6.Text = "Mở nhạc";
+                button6.Text = "Music on";
             }
             else
             {
                 System.Media.SoundPlayer player = new System.Media.SoundPlayer();
                 player.SoundLocation = "FILE_20210513_221817_MusicGamePingpong.wav";
                 player.PlayLooping();
-                button6.Text = "Tắt nhạc";
+                button6.Text = "Music off";
             }
           
         }

@@ -32,8 +32,11 @@ namespace pong
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LichSuNguoiChoi));
             this.label1 = new System.Windows.Forms.Label();
             this.quaylai = new System.Windows.Forms.Button();
-            this.lichsu = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +63,7 @@ namespace pong
             this.quaylai.FlatAppearance.BorderSize = 0;
             this.quaylai.Font = new System.Drawing.Font("Dutch801 XBd BT", 17F);
             this.quaylai.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.quaylai.Location = new System.Drawing.Point(597, 12);
+            this.quaylai.Location = new System.Drawing.Point(593, 12);
             this.quaylai.Name = "quaylai";
             this.quaylai.Size = new System.Drawing.Size(124, 42);
             this.quaylai.TabIndex = 1;
@@ -69,33 +72,47 @@ namespace pong
             this.quaylai.UseVisualStyleBackColor = false;
             this.quaylai.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lichsu
+            // listView1
             // 
-            this.lichsu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lichsu.BackColor = System.Drawing.Color.Transparent;
-            this.lichsu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lichsu.Font = new System.Drawing.Font("Dutch801 XBd BT", 20F);
-            this.lichsu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lichsu.Location = new System.Drawing.Point(29, 130);
-            this.lichsu.Name = "lichsu";
-            this.lichsu.Size = new System.Drawing.Size(672, 298);
-            this.lichsu.TabIndex = 4;
-            this.lichsu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lichsu.Click += new System.EventHandler(this.lichsu_Click_1);
+            this.listView1.BackColor = System.Drawing.Color.White;
+            this.listView1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("listView1.BackgroundImage")));
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.listView1.Font = new System.Drawing.Font("Dutch801 XBd BT", 15F);
+            this.listView1.ForeColor = System.Drawing.SystemColors.Info;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(31, 74);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(669, 352);
+            this.listView1.TabIndex = 10;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // label2
+            // columnHeader5
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Dutch801 XBd BT", 20F);
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(60, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(621, 32);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Opponent        Result              Time                 Score";
+            this.columnHeader5.Text = "Opponent";
+            this.columnHeader5.Width = 157;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Time";
+            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader6.Width = 258;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Result";
+            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader7.Width = 157;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Score";
+            this.columnHeader8.Width = 92;
             // 
             // LichSuNguoiChoi
             // 
@@ -104,13 +121,14 @@ namespace pong
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(729, 458);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lichsu);
             this.Controls.Add(this.quaylai);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.listView1);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "LichSuNguoiChoi";
             this.Text = "LichSuNguoiChoi";
+            this.Load += new System.EventHandler(this.LichSuNguoiChoi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,7 +138,10 @@ namespace pong
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button quaylai;
-        private System.Windows.Forms.Label lichsu;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }

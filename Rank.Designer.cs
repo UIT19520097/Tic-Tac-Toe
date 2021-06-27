@@ -30,27 +30,16 @@ namespace pong
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rank));
-            this.lichsu = new System.Windows.Forms.Label();
             this.quaylai = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
-            // 
-            // lichsu
-            // 
-            this.lichsu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lichsu.BackColor = System.Drawing.Color.Transparent;
-            this.lichsu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lichsu.Font = new System.Drawing.Font("Footlight MT Light", 20F);
-            this.lichsu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lichsu.Location = new System.Drawing.Point(38, 139);
-            this.lichsu.Name = "lichsu";
-            this.lichsu.Size = new System.Drawing.Size(651, 310);
-            this.lichsu.TabIndex = 7;
-            this.lichsu.Text = "Top";
-            this.lichsu.Click += new System.EventHandler(this.lichsu_Click);
             // 
             // quaylai
             // 
@@ -83,18 +72,64 @@ namespace pong
             this.label1.TabIndex = 5;
             this.label1.Text = "RANK";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // listView1
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Dutch801 XBd BT", 20F);
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(60, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(610, 32);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Top       Username     Score     Win    Lost    Draw ";
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
+            this.listView1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("listView1.BackgroundImage")));
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.listView1.Font = new System.Drawing.Font("Dutch801 XBd BT", 15F);
+            this.listView1.ForeColor = System.Drawing.SystemColors.Info;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(27, 94);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(669, 352);
+            this.listView1.TabIndex = 9;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Top";
+            this.columnHeader1.Width = 50;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Username";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 198;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Score";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 105;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Win";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 96;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Lose";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader5.Width = 110;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Draw";
+            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader6.Width = 104;
             // 
             // Rank
             // 
@@ -103,8 +138,7 @@ namespace pong
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(729, 458);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lichsu);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.quaylai);
             this.Controls.Add(this.label1);
             this.Name = "Rank";
@@ -116,10 +150,14 @@ namespace pong
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lichsu;
         private System.Windows.Forms.Button quaylai;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }

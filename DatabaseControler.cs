@@ -8,13 +8,12 @@ namespace pong
 {
     public class DatabaseControler
     {
-        private static string datasource = "Server=LAPTOP-QFSMBP0G;Database=TicTacToe;Trusted_Connection=True;";
+        private static string datasource = "Server=PC-PC;Database=TicTacToe;Trusted_Connection=True;";
         private static SqlConnection connection;
         private static SqlCommand cmd;
         private DatabaseControler ()
         {
-            connection = new SqlConnection(datasource);
-      
+            connection = new SqlConnection(datasource);   
             cmd= new SqlCommand();
             cmd.Connection = connection;
  
@@ -154,7 +153,7 @@ namespace pong
             connection.Close();
             return res;
         }
-        public string showbxh()//hiển thị lịch sử của người chơi
+        public string showbxh()//hiển thị bch của người chơi
         {
             string res = "";
             connection.Open();

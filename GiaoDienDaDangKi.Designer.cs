@@ -57,7 +57,7 @@ namespace pong
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(129, 40);
             this.button6.TabIndex = 10;
-            this.button6.Text = "Music off";
+            this.button6.Text = "Music on";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -73,7 +73,7 @@ namespace pong
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(12, 40);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(160, 46);
+            this.button3.Size = new System.Drawing.Size(146, 38);
             this.button3.TabIndex = 6;
             this.button3.Text = "CHANGE NAME";
             this.button3.UseVisualStyleBackColor = false;
