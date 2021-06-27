@@ -65,9 +65,9 @@ namespace pong
         private void DangNhap_Load(object sender, EventArgs e)
         {    
      
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-            player.SoundLocation = @".\FILE_20210513_221817_MusicGamePingpong.wav";
-            player.PlayLooping();
+          //  System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+          //  player.SoundLocation = @".\FILE_20210513_221817_MusicGamePingpong.wav";
+          //  player.PlayLooping();
         }
 
         private void bindingNavigator1_RefreshItems(object sender, EventArgs e)

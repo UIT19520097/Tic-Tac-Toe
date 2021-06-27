@@ -675,5 +675,23 @@ namespace pong
         {
 
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+                player.SoundLocation = "playinggamemusic.wav";
+                player.PlayLooping();
+                checkBox1.Text = "Music off";
+            }
+            else
+            {
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+                player.SoundLocation = "playinggamemusic.wav";
+                player.Stop();
+                checkBox1.Text = "Music on";
+            }
+        }
     }
 }

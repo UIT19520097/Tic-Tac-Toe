@@ -96,7 +96,7 @@ namespace pong
             this.Close();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+     /*   private void button6_Click(object sender, EventArgs e)
         {
             if(button6.Text == "Music off")
             {
@@ -113,7 +113,7 @@ namespace pong
                 button6.Text = "Music off";
             }
           
-        }
+        }*/
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
