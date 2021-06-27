@@ -24,8 +24,7 @@ namespace pong
         bool izHost = true;
         int round = 3;
         int Port = 8080;
-        string useropon = "doithu";
-        string doithu = "";
+        string useropon = "";
         public Game(bool isHost, string ip = null, int scr = 0, int round = 3, int port=8080)
         {
             this.ControlBox = false;
@@ -651,7 +650,7 @@ namespace pong
                 byte[] mes = udpClient.Receive(ref ipEndPoint);
                 string message = Encoding.UTF8.GetString(mes);
                 if (message.StartsWith("#"))
-                    doithu = message.Replace("#", "");
+                    useropon = message.Replace("#", "");
                 else
                     listView1.Items.Add( message);
             }
