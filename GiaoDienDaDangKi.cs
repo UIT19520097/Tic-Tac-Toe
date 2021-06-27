@@ -18,8 +18,8 @@ namespace pong
         {
             InitializeComponent();
             //this.FormBorderStyle = FormBorderStyle.None; // gỡ thanh tiêu đề
-            tennguoichoi.Text = DatabaseControler.Instance.select("ten",taikhoan);
-            highscore.Text = DatabaseControler.Instance.select("highscore",taikhoan);
+            tennguoichoi.Text = DatabaseControler.Instance.select("ten","userpass",taikhoan);
+            highscore.Text = DatabaseControler.Instance.select("score","bangxephang",taikhoan);
         }
 
         private void button1_Click(object sender, EventArgs e)
