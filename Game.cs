@@ -37,6 +37,9 @@ namespace pong
             InitializeComponent();
             Thread thdudpServer = new Thread(new ThreadStart(serverThread));
             thdudpServer.Start();
+            
+
+
             score = scr;
             this.round = round;            
             MessageReceiver.DoWork += MessageReceiver_DoWork;
@@ -564,12 +567,22 @@ namespace pong
             if (Port == 8000)
                 port2 = 8080;
             UdpClient udpClient = new UdpClient(port2);
+            UdpClient udp = new UdpClient();
+            IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), Port);
+            byte[] msg = Encoding.UTF8.GetBytes("-name#" +DangNhap.user);
+            udp.Send(msg, msg.Length, iPEndPoint);
+
             while (true)
             {
                 IPEndPoint ipEndPoint = new IPEndPoint(IPAddress.Any, 0);
                 byte[] mes = udpClient.Receive(ref ipEndPoint);
                 string message = Encoding.UTF8.GetString(mes);
-                listView1.Items.Add( message);
+                if (!message.Contains("-name#")) listView1.Items.Add(message);
+                else { 
+                    string[] words = message.Split('#');
+                    useropon = words[1];
+                    listView1.Items.Add("Lay duoc ten roi ne "+ useropon);
+                }
             }
         }
         
