@@ -25,6 +25,7 @@ namespace pong
         int round = 3;
         int Port = 8080;
         string useropon = "doithu";
+        string doithu = "";
         public Game(bool isHost, string ip = null, int scr = 0, int round = 3, int port=8080)
         {
             this.ControlBox = false;
@@ -504,6 +505,11 @@ namespace pong
             sock.Send(num);
             button1.Text = PlayerChar.ToString();
             MessageReceiver.RunWorkerAsync();
+            //gui user
+            UdpClient udp = new UdpClient();
+            IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), Port);
+            byte[] msg = Encoding.UTF8.GetBytes("#"+DangNhap.user);
+            udp.Send(msg, msg.Length, iPEndPoint);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -512,6 +518,11 @@ namespace pong
             sock.Send(num);
             button2.Text = PlayerChar.ToString();
             MessageReceiver.RunWorkerAsync();
+            //gui user
+            UdpClient udp = new UdpClient();
+            IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), Port);
+            byte[] msg = Encoding.UTF8.GetBytes("#" + DangNhap.user);
+            udp.Send(msg, msg.Length, iPEndPoint);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -520,6 +531,11 @@ namespace pong
             sock.Send(num);
             button3.Text = PlayerChar.ToString();
             MessageReceiver.RunWorkerAsync();
+            //gui user
+            UdpClient udp = new UdpClient();
+            IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), Port);
+            byte[] msg = Encoding.UTF8.GetBytes("#" + DangNhap.user);
+            udp.Send(msg, msg.Length, iPEndPoint);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -528,6 +544,11 @@ namespace pong
             sock.Send(num);
             button4.Text = PlayerChar.ToString();
             MessageReceiver.RunWorkerAsync();
+            //gui user
+            UdpClient udp = new UdpClient();
+            IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), Port);
+            byte[] msg = Encoding.UTF8.GetBytes("#" + DangNhap.user);
+            udp.Send(msg, msg.Length, iPEndPoint);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -536,6 +557,11 @@ namespace pong
             sock.Send(num);
             button5.Text = PlayerChar.ToString();
             MessageReceiver.RunWorkerAsync();
+            //gui user
+            UdpClient udp = new UdpClient();
+            IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), Port);
+            byte[] msg = Encoding.UTF8.GetBytes("#" + DangNhap.user);
+            udp.Send(msg, msg.Length, iPEndPoint);
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -544,6 +570,11 @@ namespace pong
             sock.Send(num);
             button6.Text = PlayerChar.ToString();
             MessageReceiver.RunWorkerAsync();
+            //gui user
+            UdpClient udp = new UdpClient();
+            IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), Port);
+            byte[] msg = Encoding.UTF8.GetBytes("#" + DangNhap.user);
+            udp.Send(msg, msg.Length, iPEndPoint);
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -552,6 +583,11 @@ namespace pong
             sock.Send(num);
             button7.Text = PlayerChar.ToString();
             MessageReceiver.RunWorkerAsync();
+            //gui user
+            UdpClient udp = new UdpClient();
+            IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), Port);
+            byte[] msg = Encoding.UTF8.GetBytes("#" + DangNhap.user);
+            udp.Send(msg, msg.Length, iPEndPoint);
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -560,6 +596,11 @@ namespace pong
             sock.Send(num);
             button8.Text = PlayerChar.ToString();
             MessageReceiver.RunWorkerAsync();
+            //gui user
+            UdpClient udp = new UdpClient();
+            IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), Port);
+            byte[] msg = Encoding.UTF8.GetBytes("#" + DangNhap.user);
+            udp.Send(msg, msg.Length, iPEndPoint);
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -568,6 +609,11 @@ namespace pong
             sock.Send(num);
             button9.Text = PlayerChar.ToString();
             MessageReceiver.RunWorkerAsync();
+            //gui user
+            UdpClient udp = new UdpClient();
+            IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), Port);
+            byte[] msg = Encoding.UTF8.GetBytes("#" + DangNhap.user);
+            udp.Send(msg, msg.Length, iPEndPoint);
         }
 
         private void Game_FormClosing(object sender, FormClosingEventArgs e)
@@ -604,7 +650,10 @@ namespace pong
                 IPEndPoint ipEndPoint = new IPEndPoint(IPAddress.Any, 0);
                 byte[] mes = udpClient.Receive(ref ipEndPoint);
                 string message = Encoding.UTF8.GetString(mes);
-                listView1.Items.Add( message);
+                if (message.StartsWith("#"))
+                    doithu = message.Replace("#", "");
+                else
+                    listView1.Items.Add( message);
             }
         }
         
