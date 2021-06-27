@@ -585,7 +585,7 @@ namespace pong
         {
             UdpClient udp = new UdpClient();
             IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), Port);
-            byte[] msg = Encoding.UTF8.GetBytes("DOI THU DA BO CHAY!!!");
+            byte[] msg = Encoding.UTF8.GetBytes("DOI THU DA BO CHAY!!! 🤣🤣🤣");
             udp.Send(msg, msg.Length, iPEndPoint);
             this.Close();
         }
