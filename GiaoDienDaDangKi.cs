@@ -137,7 +137,7 @@ namespace pong
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Rank f = new Rank();
+            Top f = new Top();
             f.Show();
             this.Close();
         }
