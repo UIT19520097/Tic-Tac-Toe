@@ -17,7 +17,8 @@ namespace pong
         }
 
         private void button2_Click(object sender, EventArgs e)
-        { 
+        {
+            button2.Enabled = false;
             Game newGame = new Game(true, textBox1.Text, 0,3,8080);
             Visible = false;
             if (!newGame.IsDisposed)
