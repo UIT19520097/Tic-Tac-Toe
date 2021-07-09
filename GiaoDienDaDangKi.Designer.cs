@@ -53,7 +53,7 @@ namespace pong
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(21, 70);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(181, 47);
             this.button3.TabIndex = 6;
@@ -73,10 +73,10 @@ namespace pong
             this.button4.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.button4.Image = global::pong.Properties.Resources.exit_32;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(351, 443);
+            this.button4.Location = new System.Drawing.Point(341, 437);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(240, 64);
+            this.button4.Size = new System.Drawing.Size(228, 64);
             this.button4.TabIndex = 4;
             this.button4.Text = "EXIT";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -93,10 +93,10 @@ namespace pong
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(351, 228);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Location = new System.Drawing.Point(341, 228);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(240, 64);
+            this.button5.Size = new System.Drawing.Size(228, 64);
             this.button5.TabIndex = 9;
             this.button5.Text = "HISTORY";
             this.button5.UseVisualStyleBackColor = false;
@@ -111,10 +111,10 @@ namespace pong
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(351, 370);
+            this.button2.Location = new System.Drawing.Point(341, 367);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(240, 64);
+            this.button2.Size = new System.Drawing.Size(228, 64);
             this.button2.TabIndex = 2;
             this.button2.Text = "INSTRUCTION";
             this.button2.UseVisualStyleBackColor = false;
@@ -129,10 +129,10 @@ namespace pong
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(351, 158);
+            this.button1.Location = new System.Drawing.Point(341, 158);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 64);
+            this.button1.Size = new System.Drawing.Size(228, 64);
             this.button1.TabIndex = 0;
             this.button1.Text = "PLAY";
             this.button1.UseVisualStyleBackColor = false;
@@ -145,12 +145,13 @@ namespace pong
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(763, 23);
+            this.label2.Location = new System.Drawing.Point(728, 23);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 31);
             this.label2.TabIndex = 7;
             this.label2.Text = "Score : ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tennguoichoi
             // 
@@ -171,7 +172,7 @@ namespace pong
             this.highscore.BackColor = System.Drawing.Color.Transparent;
             this.highscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.highscore.ForeColor = System.Drawing.Color.White;
-            this.highscore.Location = new System.Drawing.Point(1023, 23);
+            this.highscore.Location = new System.Drawing.Point(832, 23);
             this.highscore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.highscore.Name = "highscore";
             this.highscore.Size = new System.Drawing.Size(29, 31);
@@ -199,10 +200,10 @@ namespace pong
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(281, 58);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(279, 61);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(373, 82);
+            this.pictureBox1.Size = new System.Drawing.Size(358, 82);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
@@ -216,10 +217,10 @@ namespace pong
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(351, 298);
+            this.button7.Location = new System.Drawing.Point(341, 298);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(240, 64);
+            this.button7.Size = new System.Drawing.Size(228, 64);
             this.button7.TabIndex = 12;
             this.button7.Text = "RANK";
             this.button7.UseVisualStyleBackColor = false;
@@ -232,7 +233,7 @@ namespace pong
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(197)))), ((int)(((byte)(243)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(924, 518);
+            this.ClientSize = new System.Drawing.Size(896, 518);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox1);
