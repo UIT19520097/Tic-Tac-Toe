@@ -38,6 +38,7 @@ namespace pong
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.quaylai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -48,7 +49,7 @@ namespace pong
             // 
             this.top1.BackColor = System.Drawing.Color.Transparent;
             this.top1.Font = new System.Drawing.Font("Algerian", 40F);
-            this.top1.ForeColor = System.Drawing.Color.Yellow;
+            this.top1.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.top1.Location = new System.Drawing.Point(225, 197);
             this.top1.Name = "top1";
             this.top1.Size = new System.Drawing.Size(397, 64);
@@ -61,7 +62,7 @@ namespace pong
             // 
             this.top2.BackColor = System.Drawing.Color.Transparent;
             this.top2.Font = new System.Drawing.Font("Algerian", 30F);
-            this.top2.ForeColor = System.Drawing.Color.Yellow;
+            this.top2.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.top2.Location = new System.Drawing.Point(16, 402);
             this.top2.Name = "top2";
             this.top2.Size = new System.Drawing.Size(349, 64);
@@ -73,7 +74,7 @@ namespace pong
             // 
             this.top3.BackColor = System.Drawing.Color.Transparent;
             this.top3.Font = new System.Drawing.Font("Algerian", 30F);
-            this.top3.ForeColor = System.Drawing.Color.Yellow;
+            this.top3.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.top3.Location = new System.Drawing.Point(434, 402);
             this.top3.Name = "top3";
             this.top3.Size = new System.Drawing.Size(459, 64);
@@ -127,7 +128,7 @@ namespace pong
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Algerian", 30F);
             this.groupBox1.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.groupBox1.Location = new System.Drawing.Point(36, 12);
+            this.groupBox1.Location = new System.Drawing.Point(25, 30);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(844, 492);
             this.groupBox1.TabIndex = 13;
@@ -137,14 +138,34 @@ namespace pong
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Algerian", 15F);
-            this.button1.Location = new System.Drawing.Point(783, 18);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(754, 528);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 37);
+            this.button1.Size = new System.Drawing.Size(119, 41);
             this.button1.TabIndex = 13;
-            this.button1.Text = "detail";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Detail";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // quaylai
+            // 
+            this.quaylai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.quaylai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(75)))), ((int)(((byte)(107)))));
+            this.quaylai.FlatAppearance.BorderColor = System.Drawing.Color.Honeydew;
+            this.quaylai.FlatAppearance.BorderSize = 0;
+            this.quaylai.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F);
+            this.quaylai.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.quaylai.Location = new System.Drawing.Point(754, 8);
+            this.quaylai.Margin = new System.Windows.Forms.Padding(4);
+            this.quaylai.Name = "quaylai";
+            this.quaylai.Size = new System.Drawing.Size(119, 45);
+            this.quaylai.TabIndex = 14;
+            this.quaylai.Text = "Back";
+            this.quaylai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.quaylai.UseVisualStyleBackColor = false;
+            this.quaylai.Click += new System.EventHandler(this.quaylai_Click);
             // 
             // Top
             // 
@@ -152,8 +173,9 @@ namespace pong
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(915, 523);
+            this.ClientSize = new System.Drawing.Size(894, 575);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.quaylai);
             this.Controls.Add(this.groupBox1);
             this.Name = "Top";
             this.Text = "Form1";
@@ -175,5 +197,6 @@ namespace pong
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button quaylai;
     }
 }

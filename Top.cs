@@ -15,6 +15,7 @@ namespace pong
         public Top()
         {
             InitializeComponent();
+            //this.FormBorderStyle = FormBorderStyle.None;
         }
         private static string datasource = "Server=LAPTOP-MO4K16F4;Database=TicTacToe;Trusted_Connection=True;";
         private static SqlConnection connection;
@@ -75,6 +76,13 @@ namespace pong
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void quaylai_Click(object sender, EventArgs e)
+        {
+            GiaoDienDaDangKi f = new GiaoDienDaDangKi();
+            f.Show();
+            this.Close();
         }
     }
 }
